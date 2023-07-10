@@ -16,7 +16,7 @@ const workData = [
     project: "WEBSITE",
     client: "COOP Bank",
     duration: "3 MONTHS",
-    technologies: ["HTML", "JAVASCRIPT", "JQUERY", "PHP"],
+    technologies: ["HTML", "JS", "PHP"],
     budget: "350 USD",
     url: "http://learn.coopbank.local/",
   },
@@ -49,7 +49,7 @@ const workData = [
     project: "WEBSITE",
     client: "COOP BANK",
     duration: "3 MONTHS",
-    technologies: ["HTML", "JAVASCRIPT", "REACT", "NODEJS", "PYTHON", "JAVA"],
+    technologies: ["HTML", "JS", "REACT", "NODEJS", "JAVA"],
     budget: "1000 USD",
     url: "#",
   },
@@ -60,7 +60,7 @@ const workData = [
     project: "WEBSITE",
     client: "Black Financial Solution",
     duration: "6 MONTHS",
-    technologies: ["HTML", "JAVASCRIPT", "PHP", "MYSQL", "JQUERY", "BOOTSTRAP"],
+    technologies: ["HTML", "JS", "PHP", "MYSQL", "BOOTSTRAP"],
     budget: "450 USD",
     url: "https://doctors.black-fs.com/",
   },
@@ -71,7 +71,7 @@ const workData = [
     project: "WEBSITE",
     client: "Black Financial Solution",
     duration: "6 MONTHS",
-    technologies: ["HTML", "JAVASCRIPT", "PHP", "MYSQL", "JQUERY", "BOOTSTRAP"],
+    technologies: ["HTML", "JS", "PHP", "MYSQL", "BOOTSTRAP"],
     budget: "300 USD",
     url: "https://meetlawyer.black-fs.com/",
   },
@@ -82,7 +82,7 @@ const workData = [
     project: "WEBSITE",
     client: "Black Financial Solution",
     duration: "3 MONTHS",
-    technologies: ["HTML", "JAVASCRIPT", "PHP", "MYSQL", "JQUERY", "BOOTSTRAP"],
+    technologies: ["HTML", "JS", "PHP", "MYSQL", "JQUERY", "BOOTSTRAP"],
     budget: "300 USD",
     url: "http://black.is-best.net/Black/",
   },
@@ -93,7 +93,7 @@ const workData = [
     project: "WEBSITE",
     client: "Personal",
     duration: "3 MONTHS",
-    technologies: ["HTML", "JAVASCRIPT", "REACT", "NODEJS", "MONGODB"],
+    technologies: ["HTML", "JS", "REACT", "NODEJS", "MONGODB"],
     budget: "200 USD",
     url: "#",
   },
@@ -104,7 +104,7 @@ const workData = [
     project: "WEBSITE",
     client: "Personal",
     duration: "3 MONTHS",
-    technologies: ["HTML", "JAVASCRIPT", "PHP", "MYSQL", "JQUERY", "BOOTSTRAP"],
+    technologies: ["HTML", "JS", "PHP", "MYSQL", "BOOTSTRAP"],
     budget: "200 USD",
     url: "#",
   },
@@ -247,7 +247,7 @@ const Work = () => {
                     :{" "}
                     <span className="font-weight-600 uppercase">
                       {work.technologies.map((technologie, i) => (
-                        <Fragment key={i}>{technologie}</Fragment>
+                        <Fragment key={i}>{technologie + "  "}</Fragment>
                       ))}
                     </span>
                   </li>
