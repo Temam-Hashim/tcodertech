@@ -18,7 +18,7 @@ const IndexLeftImageDark = () => {
     <Layouts bodyCls={"dark bgimage"}>
       {/* Back To Home Ends [ONLY MOBILE] */}
       {/* Home Section Starts */}
-      <Home leftImg />
+      <Home />
       {/* Home Section Ends */}
       {/* About Section Starts */}
       <About />

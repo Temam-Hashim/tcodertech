@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import Poster from "../../public/img/Timage.jpg";
+// import Poster from "../../public/img/Timage.jpg";
 import NavContext from "../context/navContext";
 import AnimationText from "./AnimationText";
+
 const Home = ({ leftImg, video, leftImgSrc }) => {
   const { nav, changeNav } = useContext(NavContext);
   return (
@@ -11,7 +12,30 @@ const Home = ({ leftImg, video, leftImgSrc }) => {
           {/* Personal Infos Starts */}
           <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
             <div className="image-container mt-5">
-              <img className="img-fluid d-block" src="img/Timage.jpg" alt="" />
+              {/* <img
+                className="img-fluid d-block"
+                src="img/Timage.jpg"
+                alt="Temam Hashim"
+              /> */}
+              {video && (
+                <video className="bg-video" autoPlay loop muted>
+                  <source
+                    src={require("../../public/img/video.mp4")}
+                    type="video/mp4"
+                  />
+                  <source
+                    src={require("../../public/img/video.mp4")}
+                    type="video/ogg"
+                  />
+                </video>
+              )}
+              {/* {leftImg && ( */}
+              <img
+                className="img-fluid d-block"
+                src={`${leftImgSrc ? leftImgSrc : "img/Timage.jpg"}`}
+                alt=""
+              />
+              {/* )} */}
             </div>
             <p className="d-block d-md-none">
               {`I'm`} a Freelance Software Developer based in Addis Ababa,
@@ -25,7 +49,7 @@ const Home = ({ leftImg, video, leftImgSrc }) => {
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
               {/* Text Rotator Starts */}
               {video && (
-                <video className="bg-video" autoPlay loop muted poster={Poster}>
+                <video className="bg-video" autoPlay loop muted>
                   <source
                     src={require("../../public/img/video.mp4")}
                     type="video/mp4"

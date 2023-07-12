@@ -35,7 +35,7 @@ export const blogData = [
     ],
   },
   {
-    title: "Conceptualization of Blockchain",
+    title: "Conceptualization of Blockchain Technology",
     img: "img/blog/blockchain.jpg",
     tag: "blockchain",
     date: { date: "23", month: "jan", year: "2023" },

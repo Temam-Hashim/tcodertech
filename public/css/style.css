@@ -1041,8 +1041,7 @@ main#main {
 }
 
 body.fullscreendark #main>section#home {
-  /* background:transparent; */
-  background-image: url('../img/darkBackground.jpeg');
+  /* background-image: url('../img/4-2.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1056,7 +1055,8 @@ body.fullscreenlight #main>section#home {
 }
 
 body.fullscreenbgimage #main>section#home {
-  background-image: url('../img/Timage.jpg');
+  background-image: url('../img/4-2.jpg');
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1074,7 +1074,7 @@ body.fullscreenbgimage #main>section#home:after {
 }
 
 body.bgimage #main>section#home {
-  background-image: url('../img/leftimage-bg.jpg');
+  background-image: url('../img/4-2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -2022,7 +2022,7 @@ body.blog {
 body.blog .container-fluid.page-title {
   background-repeat: no-repeat;
   background-position: center top;
-  background-image: url(../img/blog/banner.jpg);
+  background-image: url("../img/blog/banner.jpg");
   padding: 0;
   margin-bottom: 60px;
 }

@@ -4,12 +4,6 @@ const nextConfig = {
   swcMinify: true,
 };
 
-module.exports = {
-  publicRuntimeConfig: {
-    publicUrl: "public/file/",
-  },
-};
-
 module.exports = nextConfig;
 
 const withVideos = require("next-videos");

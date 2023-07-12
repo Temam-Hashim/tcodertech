@@ -21,7 +21,7 @@ export const VideoSideBar = ({ playing }) => {
       className="responsive-video"
       controls="controls"
       autoPlay={false}
-      poster="img/projects/project-6.jpg"
+      // poster="img/projects/project-6.jpg"
     />
   );
 };
