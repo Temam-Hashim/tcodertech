@@ -12,7 +12,7 @@ const Demo = () => {
         <title>Temam - Choose your demo</title>
         <link href="demo/assets/css/bootstrap.min.css" rel="stylesheet" />
         <link
-          href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900"
+          href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=optional"
           rel="stylesheet"
         />
         <link rel="shortcut icon" href="demo/assets/images/favicon.png" />
@@ -22,6 +22,7 @@ const Demo = () => {
           type="text/css"
         />
       </Head>
+
       <section className="banner text-center">
         <div className="content">
           <h1>Temam Hashim</h1>

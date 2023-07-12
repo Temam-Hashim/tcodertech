@@ -186,7 +186,6 @@ const Contact = () => {
                       className="form-control"
                       placeholder="YOUR MESSAGE"
                       required=""
-                      defaultValue={""}
                     />{" "}
                   </div>
                 </div>
