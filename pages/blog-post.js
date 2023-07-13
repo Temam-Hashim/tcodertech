@@ -12,7 +12,7 @@ const BlogPost = () => {
   let { id } = router.query;
   const parsedId = parseInt(id, 10);
   let singleBlog = blogData.find((blog) => blog.id === parsedId);
-  console.log(singleBlog);
+  // console.log(singleBlog);
 
   // submit comment
   const submitComment = (e) => {
@@ -30,7 +30,7 @@ const BlogPost = () => {
         <div className="container-fluid page-title post-title">
           <div className="content-banner">
             <h2 className="text-center">
-              <span>{singleBlog.title}</span>
+              <span>{singleBlog?.title}</span>
             </h2>
             <div className="meta">
               <span>
@@ -38,11 +38,11 @@ const BlogPost = () => {
               </span>
               <span className="date">
                 <i className="fa fa-calendar" />{" "}
-                {singleBlog.date.date +
+                {singleBlog?.date.date +
                   "-" +
-                  singleBlog.date.month +
+                  singleBlog?.date.month +
                   "-" +
-                  singleBlog.date.year}
+                  singleBlog?.date.year}
               </span>
               <span>
                 <i className="fa fa-commenting" /> <a href="#">18</a>
