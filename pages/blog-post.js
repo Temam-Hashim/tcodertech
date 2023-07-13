@@ -1,30 +1,57 @@
+/* eslint-disable @next/next/no-img-element */
 import Layouts from "../src/layouts/Layouts";
+import { useRouter } from "next/router";
+import { blogData } from "./../src/components/data/blogData.js";
+import { useState } from "react";
+
 const BlogPost = () => {
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [info, setInfo] = useState("");
+  const router = useRouter();
+  let { id } = router.query;
+  const parsedId = parseInt(id, 10);
+  let singleBlog = blogData.find((blog) => blog.id === parsedId);
+  console.log(singleBlog);
+
+  // submit comment
+  const submitComment = (e) => {
+    e.preventDefault();
+    // New comment details
+    const newComment = { name: name, message: message };
+    // Add the new comment to the comment array of the single blog
+    singleBlog.comment.push(newComment);
+    setInfo("Comment added successfully");
+  };
+
   return (
     <Layouts extraPage bodyCls={"dark blog"}>
       <div className="wrapper">
         <div className="container-fluid page-title post-title">
           <div className="content-banner">
             <h2 className="text-center">
-              <span>how to be a successful freelancer</span>
+              <span>{singleBlog.title}</span>
             </h2>
             <div className="meta">
               <span>
                 <i className="fa fa-user" /> <a href="#">admin</a>
               </span>
               <span className="date">
-                <i className="fa fa-calendar" /> 9 January 2017
+                <i className="fa fa-calendar" />{" "}
+                {singleBlog.date.date +
+                  "-" +
+                  singleBlog.date.month +
+                  "-" +
+                  singleBlog.date.year}
               </span>
               <span>
-                <i className="fa fa-commenting" />{" "}
-                <a href="blog-post.html">18</a>
+                <i className="fa fa-commenting" /> <a href="#">18</a>
               </span>
               <span>
-                <i className="fa fa-tags" /> js, php, html
+                <i className="fa fa-tags" /> {singleBlog?.tag}
               </span>
               <span className="permalink">
-                <i className="fa fa-link" />{" "}
-                <a href="blog-post.html">permalink</a>
+                <i className="fa fa-link" /> <a href="#">permalink</a>
               </span>
             </div>
           </div>
@@ -36,70 +63,32 @@ const BlogPost = () => {
               <article>
                 {/* Excerpt Starts */}
                 <div className="blog-excerpt">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.Lorem ipsum dolor sit
-                    amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum.
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.Lorem ipsum dolor sit
-                    amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum.
-                  </p>
+                  {singleBlog?.des?.map((des, i) => (
+                    <p key={i}>{des}</p>
+                  ))}
+
                   {/* Meta Starts */}
                   <div className="meta meta-post-content">
                     <span>
                       <i className="fa fa-user" /> <a href="#">admin</a>
                     </span>
                     <span className="date">
-                      <i className="fa fa-calendar" /> 9 January 2017
+                      <i className="fa fa-calendar" />
+                      {singleBlog?.date.date +
+                        "-" +
+                        singleBlog?.date.month +
+                        "-" +
+                        singleBlog?.date.year}
                     </span>
                     <span>
                       <i className="fa fa-commenting" />{" "}
                       <a href="blog-post.html">18</a>
                     </span>
                     <span>
-                      <i className="fa fa-tags" /> js, php, html
+                      <i className="fa fa-tags" /> {singleBlog?.tag}
                     </span>
                     <span className="permalink">
-                      <i className="fa fa-link" />{" "}
-                      <a href="blog-post.html">permalink</a>
+                      <i className="fa fa-link" /> <a href="#">permalink</a>
                     </span>
                   </div>
                   {/* Meta Ends */}
@@ -107,120 +96,44 @@ const BlogPost = () => {
                 {/* Excerpt Ends */}
                 {/* Comments Starts */}
                 <div className="comments">
-                  <h3 className="comments-heading uppercase">3 Comments</h3>
+                  <h3 className="comments-heading uppercase">
+                    {singleBlog?.comment?.length} Comments
+                  </h3>
                   <ul className="comments-list">
                     <li>
                       {/* Comment Starts */}
-                      <div className="comment">
-                        <img
-                          className="comment-avatar pull-left"
-                          alt=""
-                          src="img/blog/user1.jpg"
-                        />
-                        <div className="comment-body">
-                          <div className="meta-data">
-                            <span className="comment-author">
-                              Dalel Boubaker
-                            </span>
-                            <span className="comment-date pull-right">
-                              January 17, 2017
-                            </span>
-                          </div>
-                          <div className="comment-content">
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur
-                              adipisicing elit, sed do eiusmod tempor incididunt
-                              ut labore et dolore magna aliqua. Ut enim ad minim
-                              veniam, quis nostrud exercitation ullamco laboris
-                              nisi ut aliquip ex ea commodo consequat. Duis aute
-                              irure dolor in reprehen.
-                            </p>
-                          </div>
-                          <div>
-                            <a className="comment-reply" href="#">
-                              Reply
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      {/* Comment Ends */}
-                      <ul className="comments-reply">
-                        <li>
-                          {/* Comment Starts */}
-                          <div className="comment">
-                            <img
-                              className="comment-avatar pull-left"
-                              alt=""
-                              src="img/blog/user2.jpg"
-                            />
-                            <div className="comment-body">
-                              <div className="meta-data">
-                                <span className="comment-author">
-                                  Lina Marzouki
-                                </span>
-                                <span className="comment-date pull-right">
-                                  January 17, 2017
-                                </span>
-                              </div>
-                              <div className="comment-content">
-                                <p>
-                                  Lorem ipsum dolor sit amet, consectetur
-                                  adipisicing elit, sed do eiusmod tempor
-                                  incididunt ut labore et dolore magna aliqua.
-                                  Ut enim ad minim veniam, quis nostrud
-                                  exercitation ullamco laboris nisi ut aliquip
-                                  ex ea commodo consequat. Duis aute irure dolor
-                                  in reprehen.
-                                </p>
-                              </div>
-                              <div>
-                                <a className="comment-reply" href="#">
-                                  Reply
-                                </a>
-                              </div>
+                      {singleBlog?.comment?.map((data, i) => (
+                        <div className="comment" key={i}>
+                          <img
+                            className="comment-avatar pull-left"
+                            alt=""
+                            src="img/avatar.png"
+                          />
+
+                          <div className="comment-body">
+                            <div className="meta-data">
+                              <span className="comment-author">
+                                {data.name}
+                              </span>
+                            </div>
+                            <div className="comment-content">
+                              <p>{data.message}</p>
                             </div>
                           </div>
-                          {/* Comment Ends */}
-                        </li>
-                      </ul>
-                      {/* Comment Starts */}
-                      <div className="comment last">
-                        <img
-                          className="comment-avatar pull-left"
-                          alt=""
-                          src="img/blog/user3.jpg"
-                        />
-                        <div className="comment-body">
-                          <div className="meta-data">
-                            <span className="comment-author">Slim Hamdi</span>
-                            <span className="comment-date pull-right">
-                              January 17, 2017
-                            </span>
-                          </div>
-                          <div className="comment-content">
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur
-                              adipisicing elit, sed do eiusmod tempor incididunt
-                              ut labore et dolore magna aliqua. Ut enim ad minim
-                              veniam, quis nostrud exercitation ullamco laboris
-                              nisi ut aliquip ex ea commodo consequat. Duis aute
-                              irure dolor in reprehen.
-                            </p>
-                          </div>
-                          <div>
-                            <a className="comment-reply" href="#">
-                              Reply
-                            </a>
-                          </div>
                         </div>
-                      </div>
-                      {/* Comment Ends */}
+                      ))}
                     </li>
                   </ul>
                   <h3 className="comments-heading uppercase add-comment">
                     Add a comment
                   </h3>
                   {/* Comments Form Starts */}
+
+                  {info && (
+                    <span className="text-info text-center p-5 m-5">
+                      {info}
+                    </span>
+                  )}
                   <div className="comments-form">
                     <form role="form">
                       {/* Name Field Starts */}
@@ -233,22 +146,12 @@ const BlogPost = () => {
                           className="form-control"
                           placeholder="YOUR NAME"
                           required=""
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
                         />
                       </div>
                       {/* Name Field Ends */}
-                      {/* Email Field Starts */}
-                      <div className="form-group col-12">
-                        <i className="fa fa-envelope prefix" />
-                        <input
-                          id="email"
-                          name="email"
-                          type="text"
-                          className="form-control"
-                          placeholder="YOUR EMAIL"
-                          required=""
-                        />
-                      </div>
-                      {/* Email Field Ends */}
+
                       {/* Comment Textarea Starts */}
                       <div className="form-group col-xl-12">
                         <i className="fa fa-comments prefix" />
@@ -258,7 +161,8 @@ const BlogPost = () => {
                           className="form-control"
                           placeholder="YOUR COMMENT"
                           required=""
-                          defaultValue={""}
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
                         />
                       </div>
                       {/* Comment Textarea Ends */}
@@ -268,6 +172,7 @@ const BlogPost = () => {
                           className="btn button-animated"
                           type="submit"
                           name="send"
+                          onClick={submitComment}
                         >
                           <span>
                             <i className="fa fa-comment" /> Add comment

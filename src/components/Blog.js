@@ -2,14 +2,15 @@ import { Fragment, useContext, useState } from "react";
 import NavContext from "../context/navContext";
 import BlogPopup from "./BlogPopup";
 import { blogData } from "./data/blogData.js";
+import Link from "next/link";
 
 const Blog = () => {
   const { nav } = useContext(NavContext);
   const [modal, setModal] = useState(false);
   const [activeData, setActiveData] = useState({});
   const onClick = (value) => {
-    setModal(true);
-    setActiveData(blogData[value]);
+    // setModal(true);
+    // setActiveData(blogData[value]);
   };
   return (
     <Fragment>
@@ -30,9 +31,11 @@ const Blog = () => {
                 <article>
                   {/* Figure Starts */}
                   <figure className="blog-figure">
-                    <a href="#" onClick={() => onClick(i)}>
-                      <img className="img-fluid" src={data.img} alt="" />
-                    </a>
+                    <Link href={`/blog-post?id=${i}`}>
+                      <a href="#">
+                        <img className="img-fluid" src={data.img} alt="" />
+                      </a>
+                    </Link>
                     <div className="post-date">
                       {" "}
                       <span>{data.date.date}</span>
@@ -51,7 +54,9 @@ const Blog = () => {
                       onClick={() => onClick(i)}
                       className="btn readmore"
                     >
-                      <span>Read more</span>
+                      <Link href={`/blog-post?id=${i}`}>
+                        <span>Read more</span>
+                      </Link>
                     </a>
                   </div>
                   {/* Excerpt Ends */}

@@ -2022,7 +2022,7 @@ body.blog {
 body.blog .container-fluid.page-title {
   background-repeat: no-repeat;
   background-position: center top;
-  background-image: url("../img/blog/banner.jpg");
+  background-image: url("../img/blog/blockchain.jpg");
   padding: 0;
   margin-bottom: 60px;
 }
@@ -2144,8 +2144,8 @@ body.blog .meta i {
 }
 
 .comments-list img.comment-avatar {
-  width: 82px;
-  height: 82px;
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   margin-right: 25px;
 }

@@ -1,5 +1,6 @@
 export const blogData = [
   {
+    id: 0,
     title: "Demystifying Neural Networks",
     img: "img/blog/neural_network.jpg",
     tag: "neural network",
@@ -15,8 +16,14 @@ export const blogData = [
       "6. Applications and Limitations: The post showcases the diverse range of applications where neural networks excel, such as image recognition, speech recognition, sentiment analysis, and recommendation systems. It also discusses the limitations and challenges of neural networks, including overfitting, vanishing gradients, and computational complexity.",
       "`Demystifying Neural Networks` aims to make neural networks more approachable for beginners. It provides a simplified explanation of their core concepts, architectures, and training processes. The blog post encourages readers to delve into the fascinating world of neural networks, inspiring further exploration and understanding of this powerful machine learning technique.",
     ],
+    comment: [
+      { name: "Temam", message: "wow cool one" },
+      { name: "Sara", message: "amusing" },
+      { name: "Hana", message: "what a blog" },
+    ],
   },
   {
+    id: 1,
     title: "Advancements in Natural Language Processing",
     img: "img/blog/natural_language.jpg",
     tag: "language processing",
@@ -33,8 +40,14 @@ export const blogData = [
       "7. Ethical Considerations and Challenges: The blog addresses the ethical considerations associated with NLP, such as bias in language models, data privacy, and responsible AI deployment. It also discusses challenges like data scarcity, domain adaptation, and interpretability in NLP models.",
       "`Advancements in Natural Language Processing` aims to provide readers with insights into the recent progress and innovations in NLP. It highlights how advancements in deep learning, language understanding, sentiment analysis, and dialogue systems are revolutionizing the way machines process and interact with human language. The blog post encourages readers to explore the potential applications of NLP in various fields and underscores the importance of responsible and ethical NLP development and deployment.",
     ],
+    comment: [
+      { name: "Temam", message: "wow cool one" },
+      { name: "Sara", message: "amusing" },
+      { name: "Hana", message: "what a blog" },
+    ],
   },
   {
+    id: 2,
     title: "Conceptualization of Blockchain Technology",
     img: "img/blog/blockchain.jpg",
     tag: "blockchain",
@@ -50,8 +63,14 @@ export const blogData = [
       "6. Challenges and Future Developments: The post addresses the challenges and limitations of blockchain technology. It discusses scalability concerns, energy consumption, regulatory considerations, and the need for interoperability and standardization. It also explores emerging trends and research areas, such as blockchain scalability solutions, privacy-enhancing techniques, and the integration of blockchain with other emerging technologies.",
       "`Conceptualization of Blockchain` aims to provide readers with a foundational understanding of blockchain technology. It explains the core concepts, components, and principles that underpin blockchain's functionality and potential applications. The blog post encourages readers to explore the possibilities of blockchain beyond cryptocurrencies and recognize its transformative potential in various industries and sectors.",
     ],
+    comment: [
+      { name: "Temam", message: "wow cool one" },
+      { name: "Sara", message: "amusing" },
+      { name: "Hana", message: "what a blog" },
+    ],
   },
   {
+    id: 3,
     title: "The Rise of Explainable AI",
     img: "img/blog/AI.jpg",
     tag: "Technology",
@@ -67,8 +86,14 @@ export const blogData = [
       "6. Ethical Considerations: The post emphasizes the ethical considerations associated with explainable AI. It discusses issues such as the right to explanation, data privacy, and the potential biases embedded in explainable AI models. It highlights the importance of addressing these ethical concerns to ensure fairness and transparency.",
       "`The Rise of Explainable AI` aims to raise awareness about the significance of explainability in AI systems. It emphasizes the need for transparency, accountability, and ethical considerations in the development and deployment of AI technologies. The blog post encourages readers to recognize the importance of explainable AI and its potential to shape a more responsible and trustworthy future for AI applications",
     ],
+    comment: [
+      { name: "Temam", message: "wow cool one" },
+      { name: "Sara", message: "amusing" },
+      { name: "Hana", message: "what a blog" },
+    ],
   },
   {
+    id: 4,
     title: "Quantum Computing: Unlocking the Power of Qubits",
     img: "img/blog/quantum_computing.jpg",
     tag: "computing",
@@ -84,9 +109,15 @@ export const blogData = [
       "6. Quantum Computing Future and Impact: The post concludes by discussing the future prospects and potential impact of quantum computing. It explores the possibilities of solving currently intractable problems, advancing fields such as materials science and cryptography, and transforming industries across finance, healthcare, and artificial intelligence.",
       "`Quantum Computing: Unlocking the Power of Qubits` aims to provide readers with an understanding of the fundamentals of quantum computing and the transformative potential it holds. It emphasizes the unique properties of qubits and their role in enabling exponential computational power. The blog post encourages readers to envision the future landscape where quantum computing can revolutionize various domains, ultimately pushing the boundaries of human knowledge and capabilities.",
     ],
+    comment: [
+      { name: "Temam", message: "wow cool one" },
+      { name: "Sara", message: "amusing" },
+      { name: "Hana", message: "what a blog" },
+    ],
   },
 
   {
+    id: 5,
     title: "The Future of Robotics: From Automation to Humanoid Machines",
     img: "img/blog/robotics.jpg",
     tag: "Robotics, ML",
@@ -102,8 +133,14 @@ export const blogData = [
       "6. Future Prospects and Impacts: The blog concludes by envisioning the future possibilities of robotics, including advancements in mobility, dexterity, sensory capabilities, and human-like cognition. It discusses potential impacts on various industries, job markets, and societal dynamics, as well as the ethical and philosophical implications of increasingly advanced robotics.",
       "`The Future of Robotics: From Automation to Humanoid Machines` aims to inspire readers to contemplate the transformative potential of robotics beyond traditional automation. It highlights the journey from industrial robots to collaborative and humanoid machines, exploring the intersection of robotics, AI, and human interaction. The blog post encourages readers to envision the future landscape where robots and humans coexist and collaborate in innovative and meaningful ways.",
     ],
+    comment: [
+      { name: "Temam", message: "wow cool one" },
+      { name: "Sara", message: "amusing" },
+      { name: "Hana", message: "what a blog" },
+    ],
   },
   {
+    id: 6,
     title: "Edge Computing: Powering the Internet of Things (IoT) Revolution",
     img: "img/blog/IOT.jpg",
     tag: "IOT",
@@ -120,8 +157,15 @@ export const blogData = [
       "6. Industry Applications: The post highlights diverse industry applications of edge computing in areas such as smart cities, industrial automation, healthcare, transportation, and retail. It showcases how edge computing is revolutionizing these sectors by enabling real-time monitoring, predictive maintenance, remote diagnostics, and personalized customer experiences.",
       "By examining these aspects, `Edge Computing: Powering the Internet of Things (IoT) Revolution` aims to emphasize the critical role of edge computing in unlocking the full potential of the IoT. It highlights the benefits it brings to real-time decision-making, scalability, security, and industry-specific applications. The blog post encourages readers to recognize the transformative impact of edge computing and its essential role in the IoT ecosystem.",
     ],
+
+    comment: [
+      { name: "Temam", message: "wow cool one" },
+      { name: "Sara", message: "amusing" },
+      { name: "Hana", message: "what a blog" },
+    ],
   },
   {
+    id: 7,
     title: "The Evolution of Virtual Reality: Beyond Gaming and Entertainment",
     img: "img/blog/VR.jpg",
     tag: "VR",
@@ -138,8 +182,14 @@ export const blogData = [
       "6. Beyond Gaming: While gaming continues to be a significant application of VR, the post explores other emerging sectors where VR is making an impact, such as virtual tourism, virtual social interactions, virtual concerts, and virtual workplaces. It showcases the versatility of VR and its potential to reshape multiple aspects of our lives.",
       "By exploring these diverse applications, `The Evolution of Virtual Reality: Beyond Gaming and Entertainment` aims to highlight the expanding horizons of VR technology. It emphasizes how VR is transforming industries, enhancing experiences, and pushing the boundaries of what is possible in various fields beyond gaming and entertainment. The blog post encourages readers to envision the future possibilities of VR and its potential to reshape how we work, learn, and interact with the world around us.",
     ],
+    comment: [
+      { name: "Temam", message: "wow cool one" },
+      { name: "Sara", message: "amusing" },
+      { name: "Hana", message: "what a blog" },
+    ],
   },
   {
+    id: 8,
     title: "Ethics in Artificial Intelligence: Navigating the Moral Dilemmas",
     img: "img/blog/AI2.jpg",
     tag: "AI",
@@ -155,8 +205,14 @@ export const blogData = [
       "5. Ethical Frameworks and Governance: The post introduces various ethical frameworks and guidelines that aim to govern the development and deployment of AI systems. It discusses initiatives such as the development of ethical AI principles, regulatory considerations, and the role of industry, academia, and policymakers in ensuring responsible AI practices.",
       "By exploring these ethical challenges and potential solutions, Ethics in Artificial Intelligence: Navigating the Moral Dilemmas aims to raise awareness and promote critical thinking about the ethical implications of AI. It encourages readers to consider the broader societal impact of AI technologies and emphasizes the importance of responsible AI development and deployment to ensure a more ethical and inclusive future.",
     ],
+    comment: [
+      { name: "Temam", message: "wow cool one" },
+      { name: "Sara", message: "amusing" },
+      { name: "Hana", message: "what a blog" },
+    ],
   },
   {
+    id: 9,
     title: "The Power of Data: Unleashing Insights with Big Data Analytics",
     img: "img/blog/big_data.jpg",
     tag: "big data",
@@ -168,6 +224,11 @@ export const blogData = [
       "Furthermore, big data analytics plays a crucial role in various fields such as healthcare, finance, marketing, cybersecurity, and more. In healthcare, it can help identify patterns in patient data to improve diagnoses, treatment plans, and population health management. In finance, it enables fraud detection, risk analysis, and personalized investment strategies. In marketing, it empowers companies to target specific customer segments, optimize campaigns, and measure marketing effectiveness",
       "However, big data analytics also poses challenges. It requires powerful computational infrastructure, scalable storage solutions, and sophisticated algorithms to process and analyze massive volumes of data. Additionally, concerns about data privacy, security, and ethical considerations arise when dealing with sensitive information.",
       "Despite the challenges, the potential of big data analytics is immense. It empowers organizations to gain deep insights, make informed decisions, and drive innovation in today's data-driven world.",
+    ],
+    comment: [
+      { name: "Temam", message: "wow cool one" },
+      { name: "Sara", message: "amusing" },
+      { name: "Hana", message: "what a blog" },
     ],
   },
 ];

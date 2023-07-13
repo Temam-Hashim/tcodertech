@@ -38,10 +38,15 @@ const About = () => {
               />
             </div>
             <p className="d-block d-md-none">
-              {`I'm`} a Freelance Software Developer based in Addis Ababa,
-              England. I strives to build immersive and beautiful web
-              applications through carefully crafted code and user-centric
-              design.
+              {`I'm`} experienced software developer, versatile blogger, and
+              skilled freelancer with a passion for crafting high-quality
+              content. Proven expertise in developing innovative software
+              solutions, delivering captivating blog articles, and providing
+              top-notch freelance services. Exceptional writing skills combined
+              with a deep understanding of technology and industry trends.
+              Committed to delivering excellence, meeting deadlines, and
+              exceeding client expectations. Seeking opportunities to leverage
+              my diverse skill set and contribute to impactful projects.
             </p>
           </div>
           <div className="row col-xl-6 col-lg-6 col-md-12">
@@ -159,7 +164,35 @@ const About = () => {
                       <span className="year">
                         <i className="fa fa-calendar" />
                         <i className="fa fa-caret-right" />
-                        OCT 2021 - Jun 2021
+                        Jun 2021 - Till Now
+                      </span>
+                      <span className="d-block font-weight-400 uppercase">
+                        Software developer
+                        <span className="separator" />
+                        <span className="font-weight-700">
+                          Cooperative Bank of Oromia
+                        </span>
+                      </span>
+                    </div>
+                    <div className="card-body">
+                      <p>
+                        Currently working as software developer at COOP BANK,
+                        Responsible for Designing, developing and maintaining
+                        software system that can support the bank operation
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* Item Ends */}
+                {/* Item Starts */}
+                <div className="item">
+                  <span className="bullet" />
+                  <div className="card">
+                    <div className="card-header">
+                      <span className="year">
+                        <i className="fa fa-calendar" />
+                        <i className="fa fa-caret-right" />
+                        Oct 2021 - Jun 2021
                       </span>
                       <span className="d-block font-weight-400 uppercase">
                         Software Developer
@@ -180,6 +213,7 @@ const About = () => {
                   </div>
                 </div>
                 {/* Item Ends */}
+
                 {/* Item Starts */}
                 <div className="item">
                   <span className="bullet" />
@@ -188,21 +222,23 @@ const About = () => {
                       <span className="year">
                         <i className="fa fa-calendar" />
                         <i className="fa fa-caret-right" />
-                        JUN 2021 - Till Now
+                        JAN 2022 - Jun 2022
                       </span>
                       <span className="d-block font-weight-400 uppercase">
-                        Software developer
+                        Lecturer
                         <span className="separator" />
                         <span className="font-weight-700">
-                          Cooperative Bank of Oromia
+                          Werabe University
                         </span>
                       </span>
                     </div>
                     <div className="card-body">
                       <p>
-                        Currently working as software developer at COOP BANK,
-                        Responsible for Designing, developing and maintaining
-                        software system that can support the bank operation
+                        Experienced and dedicated lecturer with a passion for
+                        knowledge sharing and fostering intellectual growth.
+                        Proven expertise in Computer Programming. Committed to
+                        creating a stimulating learning environment, engaging
+                        students through innovative teaching methods
                       </p>
                     </div>
                   </div>

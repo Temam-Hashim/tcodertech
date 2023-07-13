@@ -38,11 +38,15 @@ const Home = ({ leftImg, video, leftImgSrc }) => {
               {/* )} */}
             </div>
             <p className="d-block d-md-none">
-              {`I'm`} a Freelance Software Developer based in Addis Ababa,
-              England. I strives to build immersive and beautiful web
-              applications through carefully crafted code and user-centric
-              design. I seek challenging opportunities where I can fully use my
-              skills for mutual our success.
+              {`I'm`} experienced software developer, versatile blogger, and
+              skilled freelancer with a passion for crafting high-quality
+              content. Proven expertise in developing innovative software
+              solutions, delivering captivating blog articles, and providing
+              top-notch freelance services. Exceptional writing skills combined
+              with a deep understanding of technology and industry trends.
+              Committed to delivering excellence, meeting deadlines, and
+              exceeding client expectations. Seeking opportunities to leverage
+              my diverse skill set and contribute to impactful projects.
             </p>
           </div>
           <div className="row col-xl-6 col-lg-6 col-md-12">
@@ -66,13 +70,18 @@ const Home = ({ leftImg, video, leftImgSrc }) => {
                 <h3>Hi there !</h3>
                 <AnimationText />
                 <p>
-                  {`I'm`} a Freelance Software Developer based in Addis Ababa,
-                  England. I strives to build immersive and beautiful web
-                  applications through carefully crafted code and user-centric
-                  design. I seek challenging opportunities where I can fully use
-                  my skills for mutual our success.
+                  {`I'm`} experienced software developer, versatile blogger, and
+                  skilled freelancer with a passion for crafting high-quality
+                  content. Proven expertise in developing innovative software
+                  solutions, delivering captivating blog articles, and providing
+                  top-notch freelance services. Exceptional writing skills
+                  combined with a deep understanding of technology and industry
+                  trends. Committed to delivering excellence, meeting deadlines,
+                  and exceeding client expectations. Seeking opportunities to
+                  leverage my diverse skill set and contribute to impactful
+                  projects.
                 </p>
-                <div className="call-to-actions-home">
+                <div className="call-to-actions-home mt-5">
                   <div className="text-left">
                     <a
                       href="#about"
